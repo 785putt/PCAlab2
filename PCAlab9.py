@@ -60,10 +60,10 @@ class BST:
             return root
         # Find the node in the left subtree	if key value is less than root value
         if root.new_node > key: 
-            root.left = delete_Node(root.left, key)
+            root.left = self.delete_Node(root.left, key)
         # Find the node in right subtree if key value is greater than root value, 
         elif root.new_node < key: 
-            root.right= delete_Node(root.right, key)
+            root.right= self.delete_Node(root.right, key)
         # Delete the node if root.value == key
         else: 
         # If there is no right children delete the node and new root would be root.left
@@ -81,7 +81,7 @@ class BST:
                 temp_val = temp_val.left
                 mini_val = temp_val.new_node
     # Delete the minimum node in right subtree
-            root.right = deleteNode(root.right,root.new_node)
+            root.right = self.deleteNode(root.right,root.new_node)
         return root
 
  
@@ -149,8 +149,8 @@ tree.print()
 print("\nFinding user name & password:",str(tree.new_node[0]),str(tree.new_node[1]))
 tree.findval(('snickers', 93352))
 print()
-print("Preorder tranverse:"), tree.preorder()
-#print("Inorder tranverse:"), tree.inorder()
+# print("Preorder tranverse:"), tree.preorder()
+print("Inorder tranverse:"), tree.inorder()
 #print("Postorder tranverse:"), tree.postorder
 
 print("\nLogin attempts system (as stated in canvas)")
